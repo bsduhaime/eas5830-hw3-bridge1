@@ -21,7 +21,7 @@ def sign_message(challenge, filename="secret_key.txt"):
 
     # TODO recover your account information for your private key and sign the given challenge
     # Use the code from the signatures assignment to sign the given challenge
-    signed_message = w3.eth.account.sign_message(message, private_key=key.rstrip())    # Remove newline
+    signed_message = w3.eth.account.sign_message(message, private_key=key[0].rstrip())    # Remove newline
 
 
 
