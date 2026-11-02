@@ -21,11 +21,9 @@ def sign_message(challenge, filename="secret_key.txt"):
 
     # TODO recover your account information for your private key and sign the given challenge
     # Use the code from the signatures assignment to sign the given challenge
+    print(key[0].rstrip())
     signed_message = w3.eth.account.sign_message(message, private_key=key[0].rstrip())    # Remove newline
-    eth_addr = 0x429a256aeA60De9bCA25F36d44e683c1a9150dE9
-
-
-
+    eth_addr = "0x429a256aeA60De9bCA25F36d44e683c1a9150dE9"
 
     assert eth_account.Account.recover_message(message,signature=signed_message.signature.hex()) == eth_addr, f"Failed to sign message properly"
 
